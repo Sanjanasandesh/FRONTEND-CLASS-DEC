@@ -1,0 +1,46 @@
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto  ;
+    height: 100vh;
+    margin: 0;
+ }
+
+ header {
+    grid-row: 1;
+    background-color: black;
+    color: wheat;
+    text-align: center;
+    padding: 1rem;
+ }
+
+
+ .container{
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 20% 1fr 20%;
+    gap: 2rem;
+ }
+
+
+ .left-side{
+    background-color: #c7c7c7;
+    padding: 1rem;
+    border-right: 2px solid green ;
+ }
+ .main-content {
+ 
+    background-color: aquamarine;
+    padding: 16px;
+}
+
+.right-side{
+    border-left: 3px solid #fafa00;
+}
+
+footer{
+grid-row: 3;
+    background-color: red;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
