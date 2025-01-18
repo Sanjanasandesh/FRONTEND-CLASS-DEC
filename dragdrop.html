@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drag and Drop Example</title>
+  <style>
+    #drag-item {
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+      color: white;
+      text-align: center;
+      line-height: 100px;
+      margin-bottom: 10px;
+      cursor: grab;
+    }
+
+    #drop-area {
+      width: 200px;
+      height: 150px;
+      border: 2px dashed #ccc;
+      text-align: center;
+      line-height: 150px;
+    }
+    #drop-area.over {
+      border-color: green;
+    }
+  </style>
+</head>
+<body>
+  <h2>Drag and Drop API Example</h2>
+  <div id="drag-item" draggable="true">Drag Me</div>
+  <div id="drop-area">Drop Here</div>
+
+  <script>
+    const dragItem = document.getElementById('drag-item');
+    const dropArea = document.getElementById('drop-area');
+
+    // Drag event listeners
+    dragItem.addEventListener('dragstart', (e) => {
+      e.dataTransfer.setData('text', e.target.id);
+    });
+
+    // Drop area event listeners
+    dropArea.addEventListener('dragover', (e) => {
+      e.preventDefault(); // Allow drop
+      dropArea.classList.add('over');
+    });
+
+    dropArea.addEventListener('dragleave', () => {
+      dropArea.classList.remove('over');
+    });
+
+    dropArea.addEventListener('drop', (e) => {
+      e.preventDefault();
+      const draggedElementId = e.dataTransfer.getData('text');
+      const draggedElement = document.getElementById(draggedElementId);
+      dropArea.appendChild(draggedElement);
+      dropArea.classList.remove('over');
+    });
+  </script>
+</body>
+</html>
