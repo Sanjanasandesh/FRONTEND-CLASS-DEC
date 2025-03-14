@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style8.css">
+</head>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRs8gk957vN8P1DC_80XMxD4uiLXcNlk-Qfnw&s" alt="Profile Picture" class="profile-img">
+        <p>Welcome to my portfolio website. I am a web developer passionate about creating beautiful and functional websites.</p>
+    </section>
+    
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQP1mBgbN9Dn82T4YFRSuID3A9BhFuOis1wZg&s" alt="Project 1" class="project-img">
+            <h3>Project 1</h3>
+            <p>A brief description of my project.</p>
+        </div>
+        <div class="project">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhnbD7hQBn07q_c4CnGnqFvQYBLEzHbw68iQ&s" alt="Project 2" class="project-img">
+            <h3>Project 2</h3>
+            <p>Another cool project I worked on.</p>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <p id="response-message"></p>
+    </section>
+    
+    <script src="script1.js"></script>
+</body>
+</html>
